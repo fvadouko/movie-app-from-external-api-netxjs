@@ -1,4 +1,6 @@
 import Head from "next/head";
+import React from "react";
+import { Context } from "../lib/Context";
 import Header from "./Header";
 import Searchbar from "./Searchbar";
 
@@ -8,10 +10,15 @@ const layoutStyle = {
 };
 
 const Layout = ({ children }) => {
+  const {
+    state: { links, active, query },
+    setActive,
+  } = React.useContext(Context);
+
   return (
     <div>
       <Head>
-        <title>Movie App From External Api</title>
+        <title>Movie App From An External Api</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           rel="stylesheet"
@@ -32,9 +39,9 @@ const Layout = ({ children }) => {
           <div className="row">
             <div className="col-md-10 offset-1">
               <>
-                <h1>Movie App From External Api</h1>
+                <h1>Movie App From An External Api</h1>
                 <Searchbar />
-                <Header />
+                {query.trim() !== "" && <Header />}
                 {children}
               </>
             </div>

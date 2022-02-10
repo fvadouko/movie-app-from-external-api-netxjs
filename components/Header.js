@@ -23,7 +23,7 @@ const Header = () => {
       {links.map((link, index) => {
         return (
           <li key={index} className="nav-item" onClick={() => setActive(link)}>
-            <Links query="" {...link}>
+            <Links query={query} {...link}>
               <span
                 className={`nav-link ${
                   link.name === active.name && "isActive"
