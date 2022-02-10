@@ -11,18 +11,15 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Head>
-        <title>Movie Database</title>
+        <title>Movie App From External Api</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossorigin="anonymous"
         />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
           rel="stylesheet"
-          crossorigin="anonymous"
         />
         <link
           rel="shortcut icon"
@@ -35,6 +32,7 @@ const Layout = ({ children }) => {
           <div className="row">
             <div className="col-md-10 offset-1">
               <>
+                <h1>Movie App From External Api</h1>
                 <Searchbar />
                 <Header />
                 {children}

@@ -1,5 +1,6 @@
 import { Context } from "../lib/Context";
 import Router from "next/router";
+import React from "react";
 const Searchbar = () => {
   const { setQuery, query } = React.useContext(Context);
   const setResults = (e) => {
@@ -8,10 +9,10 @@ const Searchbar = () => {
   };
   return (
     <form style={{ marginBottom: "20px" }} onSubmit={(e) => setResults(e)}>
-      <div class="form-group">
+      <div className="form-group">
         <input
           type="text"
-          class="form-control form-control-lg"
+          className="form-control form-control-lg"
           id="exampleCheck1"
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search Title ..."

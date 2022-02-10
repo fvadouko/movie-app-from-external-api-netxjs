@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 import { Context } from "../lib/Context";
 
 const Links = ({ query, children, name }) => {
@@ -18,10 +19,10 @@ const Header = () => {
   } = React.useContext(Context);
 
   return (
-    <ul class="nav nav-pills nav-fill" style={{ marginBottom: "20px" }}>
-      {links.map((link) => {
+    <ul className="nav nav-pills nav-fill" style={{ marginBottom: "20px" }}>
+      {links.map((link, index) => {
         return (
-          <li className="nav-item" onClick={() => setActive(link)}>
+          <li key={index} className="nav-item" onClick={() => setActive(link)}>
             <Links query="" {...link}>
               <span
                 className={`nav-link ${

@@ -1,13 +1,16 @@
+import React from "react";
+
 const placeholderImg =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQDsfRCwQvpsd4O5b6IK9evG9H1PTxZLoI6ew5iVnlz3ftQjMBQ";
 const Card = ({ Title, Poster, Year, imdbID }) => {
   return (
-    <div class="card" style={{ marginBottom: "10px" }}>
-      <div class="card-body d-flex justify-content-between">
-        <div class="d-flex align-items-start">
+    <div className="card" style={{ marginBottom: "10px" }}>
+      <div className="card-body d-flex justify-content-between">
+        <div className="d-flex align-items-start">
           <a
             href={`https://www.imdb.com/title/${imdbID}`}
             target="_blank"
+            rel="noreferrer"
             style={{ color: "#9b59b6" }}
           >
             <img
@@ -18,7 +21,7 @@ const Card = ({ Title, Poster, Year, imdbID }) => {
               height="130"
             />
 
-            <span class="title" style={{ fontSize: "20px" }}>
+            <span className="title" style={{ fontSize: "20px" }}>
               {Title}
             </span>
           </a>
